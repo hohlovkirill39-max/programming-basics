@@ -3,10 +3,8 @@ import string
 
 path = "/usr/share/licenses/imhex/LICENSE"
 
-with open(path, mode="r", encoding="utf-8") as file:
-    text = file.read()
-
-text = text.lower()
+with open(path) as file:
+    text = file.read().lower()
 
 for ch in string.punctuation:
     text = text.replace(ch, " ")
